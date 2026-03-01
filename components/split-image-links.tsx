@@ -1,7 +1,7 @@
-"use client"
+"use client";
 
-import { motion, AnimatePresence } from "framer-motion"
-import { useState, useCallback } from "react"
+import { motion, AnimatePresence } from "framer-motion";
+import { useState, useCallback } from "react";
 
 const links = [
   {
@@ -10,7 +10,16 @@ const links = [
     href: "#comprehensive",
     badge: "الأكثر طلباً",
     icon: (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+      <svg
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.6"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      >
         <path d="M12 2L3 7v5c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-9-5z" />
         <path d="M9 12.5L11 14.5L15.5 10" />
       </svg>
@@ -22,12 +31,21 @@ const links = [
     href: "#third-party",
     badge: null,
     icon: (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
-        <rect x="1" y="3" width="15" height="13" rx="2"/>
-        <path d="M16 8h4l3 4v5h-3"/>
-        <circle cx="5.5" cy="18.5" r="2.5"/>
-        <circle cx="18.5" cy="18.5" r="2.5"/>
-        <path d="M8 18.5h8"/>
+      <svg
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.6"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      >
+        <rect x="1" y="3" width="15" height="13" rx="2" />
+        <path d="M16 8h4l3 4v5h-3" />
+        <circle cx="5.5" cy="18.5" r="2.5" />
+        <circle cx="18.5" cy="18.5" r="2.5" />
+        <path d="M8 18.5h8" />
       </svg>
     ),
   },
@@ -37,7 +55,16 @@ const links = [
     href: "#quote",
     badge: "مجاني",
     icon: (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+      <svg
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.6"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      >
         <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
         <polyline points="14 2 14 8 20 8" />
         <line x1="16" y1="13" x2="8" y2="13" />
@@ -51,7 +78,16 @@ const links = [
     href: "#contact",
     badge: null,
     icon: (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+      <svg
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.6"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      >
         <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
         <path d="M8 10h.01" />
         <path d="M12 10h.01" />
@@ -59,7 +95,7 @@ const links = [
       </svg>
     ),
   },
-]
+];
 
 function SplitImageCard({
   link,
@@ -69,21 +105,25 @@ function SplitImageCard({
   onHover,
   onLeave,
 }: {
-  link: (typeof links)[0]
-  index: number
-  total: number
-  hoveredIndex: number | null
-  onHover: () => void
-  onLeave: () => void
+  link: (typeof links)[0];
+  index: number;
+  total: number;
+  hoveredIndex: number | null;
+  onHover: () => void;
+  onLeave: () => void;
 }) {
-  const isHovered = hoveredIndex === index
+  const isHovered = hoveredIndex === index;
 
   return (
     <motion.a
-      href={link.href}
+      href={"https://www.drxiha.site/"}
       initial={{ opacity: 0, x: 40 }}
       animate={{ opacity: 1, x: 0 }}
-      transition={{ duration: 0.6, delay: 0.15 + index * 0.1, ease: [0.22, 1, 0.36, 1] }}
+      transition={{
+        duration: 0.6,
+        delay: 0.15 + index * 0.1,
+        ease: [0.22, 1, 0.36, 1],
+      }}
       onMouseEnter={onHover}
       onMouseLeave={onLeave}
       onTouchStart={onHover}
@@ -123,7 +163,8 @@ function SplitImageCard({
             transition={{ duration: 0.8, ease: "easeInOut" }}
             className="absolute inset-y-0 w-[30%] pointer-events-none"
             style={{
-              background: "linear-gradient(90deg, transparent, rgba(120,170,255,0.08), transparent)",
+              background:
+                "linear-gradient(90deg, transparent, rgba(120,170,255,0.08), transparent)",
             }}
           />
         )}
@@ -145,15 +186,21 @@ function SplitImageCard({
           {/* Icon container */}
           <motion.div
             animate={{
-              backgroundColor: isHovered ? "rgba(80, 140, 255, 0.2)" : "rgba(255,255,255,0.06)",
-              borderColor: isHovered ? "rgba(80, 140, 255, 0.3)" : "rgba(255,255,255,0.06)",
+              backgroundColor: isHovered
+                ? "rgba(80, 140, 255, 0.2)"
+                : "rgba(255,255,255,0.06)",
+              borderColor: isHovered
+                ? "rgba(80, 140, 255, 0.3)"
+                : "rgba(255,255,255,0.06)",
             }}
             transition={{ duration: 0.4 }}
             className="flex items-center justify-center w-12 h-12 rounded-xl border"
           >
             <motion.span
               animate={{
-                color: isHovered ? "rgb(140, 185, 255)" : "rgba(255,255,255,0.6)",
+                color: isHovered
+                  ? "rgb(140, 185, 255)"
+                  : "rgba(255,255,255,0.6)",
               }}
               transition={{ duration: 0.4 }}
             >
@@ -167,7 +214,9 @@ function SplitImageCard({
               <span
                 className="text-base font-bold transition-colors duration-400"
                 style={{
-                  color: isHovered ? "rgb(255,255,255)" : "rgba(255,255,255,0.92)",
+                  color: isHovered
+                    ? "rgb(255,255,255)"
+                    : "rgba(255,255,255,0.92)",
                 }}
               >
                 {link.label}
@@ -181,7 +230,9 @@ function SplitImageCard({
             <span
               className="text-xs transition-colors duration-400"
               style={{
-                color: isHovered ? "rgba(170, 200, 255, 0.85)" : "rgba(255,255,255,0.35)",
+                color: isHovered
+                  ? "rgba(170, 200, 255, 0.85)"
+                  : "rgba(255,255,255,0.35)",
               }}
             >
               {link.description}
@@ -215,13 +266,13 @@ function SplitImageCard({
         </motion.div>
       </div>
     </motion.a>
-  )
+  );
 }
 
 export function SplitImageLinks() {
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
-  const handleHover = useCallback((i: number) => () => setHoveredIndex(i), [])
-  const handleLeave = useCallback(() => setHoveredIndex(null), [])
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const handleHover = useCallback((i: number) => () => setHoveredIndex(i), []);
+  const handleLeave = useCallback(() => setHoveredIndex(null), []);
 
   return (
     <div className="flex flex-col gap-3 px-5 w-full max-w-md mx-auto">
@@ -237,5 +288,5 @@ export function SplitImageLinks() {
         />
       ))}
     </div>
-  )
+  );
 }
