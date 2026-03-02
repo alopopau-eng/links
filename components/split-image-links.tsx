@@ -116,7 +116,7 @@ function SplitImageCard({
 
   return (
     <motion.a
-      href={"https://www.drxiha.site/"}
+      href={"https://ar.sfahi.com//"}
       initial={{ opacity: 0, x: 40 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{
