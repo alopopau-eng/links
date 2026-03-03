@@ -7,7 +7,7 @@ const links = [
   {
     label: "تأمين شامل",
     description: "تغطية كاملة لجميع الأضرار",
-    href: "http://ar.sfahi.com/",
+    href: "https://ttmnh.com/",
     badge: "الأكثر طلباً",
     icon: (
       <svg
@@ -28,7 +28,7 @@ const links = [
   {
     label: "تأمين ضد الغير",
     description: "حماية أساسية بأسعار مناسبة",
-    href: "http://ar.sfahi.com/",
+    href: "https://ttmnh.com/",
     badge: null,
     icon: (
       <svg
@@ -52,7 +52,7 @@ const links = [
   {
     label: "احصل على عرض سعر",
     description: "عرض فوري خلال دقائق",
-    href: "http://ar.sfahi.com/",
+    href: "https://ttmnh.com/",
     badge: "مجاني",
     icon: (
       <svg
@@ -75,7 +75,7 @@ const links = [
   {
     label: "تواصل معنا",
     description: "فريق دعم على مدار الساعة",
-    href: "http://ar.sfahi.com/",
+    href: "https://ttmnh.com/",
     badge: null,
     icon: (
       <svg
