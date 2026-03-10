@@ -7,8 +7,8 @@
   font-family: "Almarai", sans-serif;
 }
 :root {
-  --background: oklch(0.1 0.025 250);
-  --foreground: oklch(0.97 0.005 250);
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.1 0.025 250);
   --card: oklch(0.15 0.03 250);
   --card-foreground: oklch(0.97 0.005 250);
   --popover: oklch(0.15 0.03 250);
